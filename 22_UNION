@@ -1,0 +1,50 @@
+Note: If some customers or suppliers have the same city, each city will only be listed once,
+because UNION selects only distinct values. Use UNION ALL to also select duplicate values!
+
+
+1)
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+2)The following SQL statement returns the cities (duplicate values also) from both the "Customers" and the "Suppliers" table:
+
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+
+3)
+SELECT City, Country FROM Customers
+WHERE Country='Germany'
+UNION
+SELECT City, Country FROM Suppliers
+WHERE Country='Germany'
+ORDER BY City;
+
+4) The following SQL statement lists all customers and suppliers:
+
+SELECT 'Customer' AS Type, ContactName, City, Country
+FROM Customers
+UNION
+SELECT 'Supplier', ContactName, City, Country
+FROM Suppliers;
+
+| Customer | Paul Henriot               | Reims           | France      |
+| Customer | Rita Müller                | Stuttgart       | Germany     |
+| Customer | Pirkko Koskitalo           | Oulu            | Finland     |
+| Customer | Paula Parente              | Resende         | Brazil      |
+| Customer | Karl Jablonski             | Seattle         | USA         |
+| Customer | Matti Karttunen            | Helsinki        | Finland     |
+| Customer | Zbyszek                    | Walla           | Poland      |
+| Supplier | Charlotte Cooper           | Londona         | UK          |
+| Supplier | Shelley Burke              | New Orleans     | USA         |
+| Supplier | Regina Murphy              | Ann Arbor       | USA         |
+| Supplier | Yoshi Nagase               | Tokyo           | Japan       |
+| Supplier | Antonio del Valle Saavedra | Oviedo          | Spain       |
+| Supplier | Mayumi Ohno                | Osaka           | Japan       |
+| Supplier | Ian Devling                | Melbourne       | Australia   |
+| Supplier | Peter Wilson               | Manchester      | UK          |
+| Supplier | Lars Peterson              | Göteborg        | Sweden      |

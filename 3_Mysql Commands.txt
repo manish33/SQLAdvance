@@ -6,3 +6,5 @@ mysql> source /Users/m0s0qyz/Documents/SQL/w3schools.sql
 
 4) select db
  USE `w3schools`;
+
+

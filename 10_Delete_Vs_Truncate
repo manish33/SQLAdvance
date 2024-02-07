@@ -1,0 +1,15 @@
+DELETE is a DML(Data Manipulation Language) command and is used when we specify the row (tuple) that we want to remove or
+delete from the table or relation. The DELETE command can contain a WHERE clause. If the WHERE clause is used with the DELETE command,
+then it removes or deletes only those rows (tuples) that satisfy the condition;
+otherwise, by default, it removes all the tuples (rows) from the table. Remember that DELETE logs the row deletions.
+
+
+TRUNCATE is a DDL(Data Definition Language) command and is used to delete all the rows or tuples from a table. Unlike the DELETE command,
+the TRUNCATE command does not contain a WHERE clause. In the TRUNCATE command, the transaction log for each deleted data page is not recorded.
+Unlike the DELETE command, the TRUNCATE command is fast. We cannot roll back the data after using the TRUNCATE command.
+
+
+To use Delete you need DELETE permission on the table.
+
+To use Truncate on a table we need at least ALTER permission on the table.
+

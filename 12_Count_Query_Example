@@ -1,0 +1,16 @@
+I want to use the second column (art_count) to show only those rows containing X percent of total art_count.
+
+My data:
+
+title   art_count
+a       3
+b       12
+c       9
+d       4
+e       45
+
+
+SELECT title, COUNT(art) AS art_count
+FROM table1
+GROUP BY title
+HAVING art_count >= (select count(*) * X / 100 from table1)

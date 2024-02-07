@@ -1,0 +1,9 @@
+1)
+SELECT AVG(Price)
+FROM Products
+WHERE CategoryID = 1;
+
+2)  Higher Than Average
+
+   SELECT * FROM Products
+   WHERE price > (SELECT AVG(price) FROM Products);

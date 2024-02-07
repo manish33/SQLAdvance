@@ -1,0 +1,11 @@
+1)
+SELECT SUM(Quantity)
+FROM OrderDetails
+WHERE ProductId = 11;
+
+2) SELECT SUM(Quantity * 10)
+   FROM OrderDetails;
+
+3) SELECT SUM(Price * Quantity)
+   FROM OrderDetails
+   LEFT JOIN Products ON OrderDetails.ProductID = Products.ProductID;

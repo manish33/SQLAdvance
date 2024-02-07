@@ -1,0 +1,17 @@
+1) CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+
+EXEC SelectAllCustomers;
+
+
+2)
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+AS
+SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+GO;
+
+
+EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';

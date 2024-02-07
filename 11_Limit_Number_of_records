@@ -1,0 +1,20 @@
+1) SELECT TOP 3 * FROM Customers
+   WHERE Country='Germany';
+
+2) SELECT TOP 3 CustomerName,ContactName FROM Customers;
+
+3)SELECT column_name(s)
+  FROM table_name
+  WHERE condition
+  LIMIT number;
+
+4) SELECT TOP 50 PERCENT * FROM Customers;
+
+MYSQL: SELECT * FROM Customers
+       ORDER BY your_ordering_column
+       LIMIT (SELECT COUNT(*) * 0.5 FROM Customers);
+
+In MySQL, the LIMIT clause can be used without an explicit ORDER BY clause,
+ but the order of the results may not be predictable, as it depends on the physical storage and retrieval of the data.
+ If you use LIMIT without ORDER BY, the database engine will return an arbitrary subset of rows.
+

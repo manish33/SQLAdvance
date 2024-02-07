@@ -1,0 +1,7 @@
+1)
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+2)
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;

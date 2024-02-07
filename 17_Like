@@ -1,0 +1,49 @@
+1)
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+2) Return all customers from a city that starts with 'L' followed by one wildcard character,
+then 'nd' and then two wildcard characters:
+
+
+SELECT * FROM Customers
+WHERE city LIKE 'L_nd__';
+
+3)  Return all customers from a city that contains the letter 'L':
+
+SELECT * FROM Customers
+   WHERE city LIKE '%L%';
+
+4) SELECT * FROM Customers
+   WHERE CustomerName LIKE 'La%';
+
+5) SELECT * FROM Customers
+   WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
+
+6)Return all customers that starts with "b" and ends with "s":
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'b%s';
+
+7)Return all customers that starts with "a" and are at least 3 characters in length:
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
+
+8) Return all customers that have "r" in the second position:
+   SELECT * FROM Customers
+   WHERE CustomerName LIKE '_r%';
+
+9) Without Wildcard
+    SELECT * FROM Customers
+    WHERE Country LIKE 'Spain';
+
+10) Return all customers starting with either "b", "s", or "p":
+
+    SELECT * FROM Customers
+    WHERE CustomerName LIKE '[bsp]%';
+
+11) Return all customers starting with "a", "b", "c", "d", "e" or "f":
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[a-f]%'

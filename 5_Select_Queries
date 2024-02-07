@@ -1,0 +1,65 @@
+SELECT column1, column2, ...
+FROM table_name;
+
+
+Example
+
+1) SELECT CustomerName, City FROM Customers;
+
+2) SELECT * FROM Customers;
+
+3) SELECT DISTINCT Country FROM Customers;
+
+4) SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+5) SELECT COUNT(DISTINCT Country) FROM Customers;
+
+6) SELECT * FROM Customers WHERE Country='Mexico'
+
+7) Finding duplicate pairs:
+SELECT uid FROM tablename
+GROUP BY uid, name HAVING COUNT(*) = 2;
+
+8) SELECT * FROM Customers
+   WHERE CustomerID > 80;
+
+9) SELECT column1, column2, ...
+   FROM table_name
+   WHERE condition1 AND condition2 AND condition3 ...;
+
+   SELECT *
+   FROM Customers
+   WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+
+ 10)
+ SELECT * FROM Customers
+ WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+
+ 11)
+ Without parenthesis, the select statement will return all customers from Spain that starts with a "G",
+ plus all customers that starts with an "R", regardless of the country value:
+
+
+ SELECT * FROM Customers
+ WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
+
+12) SELECT * FROM Customers
+    WHERE NOT Country = 'Spain';
+
+    SELECT * FROM Customers
+    WHERE CustomerName NOT LIKE 'A%';
+
+ SELECT * FROM Customers
+ WHERE City NOT IN ('Paris', 'London');
+
+
+13) SELECT column_names
+    FROM table_name
+    WHERE column_name IS NULL;
+
+14) SELECT column_names
+    FROM table_name
+    WHERE column_name IS NOT NULL;
+
+

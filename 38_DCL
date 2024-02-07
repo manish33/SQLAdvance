@@ -1,0 +1,30 @@
+1)
+BEGIN TRANSACTION transaction_name ;
+
+
+COMMIT;
+
+2) DELETE FROM Student WHERE AGE = 20;
+   ROLLBACK;
+
+3) SAVEPOINT SP1;
+   //Savepoint created.
+   DELETE FROM Student WHERE AGE = 20;
+   //deleted
+   SAVEPOINT SP2;
+   //Savepoint created.
+   ROLLBACK TO SP1;
+
+4) RELEASE SAVEPOINT SAVEPOINT_NAME
+
+5) GRANT SELECT ON Users TO 'Amit'@'localhost;'
+   GRANT SELECT, INSERT, DELETE, UPDATE ON Users TO 'Amit'@'localhost';
+
+  GRANT ALL ON Users TO 'Amit'@'localhost';
+
+  GRANT EXECUTE ON FUNCTION Calculatesalary TO 'Amit'@'localhost';
+  GRANT EXECUTE ON PROCEDURE DBMSProcedure TO 'Amit'@'localhost';
+  REVOKE SELECT, INSERT, DELETE, UPDATE ON Users FROM 'Amit'@'localhost';
+
+
+

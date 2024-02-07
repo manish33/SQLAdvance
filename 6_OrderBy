@@ -1,0 +1,15 @@
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+
+
+1) SELECT * FROM Products
+ORDER BY Price DESC;
+
+2) SELECT * FROM Customers
+   ORDER BY Country, CustomerName;
+
+3) SELECT * FROM Customers
+   ORDER BY Country ASC, CustomerName DESC;
+

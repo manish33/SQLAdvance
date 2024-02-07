@@ -1,0 +1,9 @@
+1)
+issue:In the example below, if any of the "UnitsOnOrder" values are NULL, the result will be NULL.
+
+
+SELECT ProductName, UnitPrice * (UnitsInStock + UnitsOnOrder)
+FROM Products;
+
+solution:
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))

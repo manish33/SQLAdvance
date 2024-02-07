@@ -1,0 +1,10 @@
+1)
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+2) DELETE FROM Customers;
+
+3) DROP TABLE Customers;
+
+4) TRUNCATE TABLE TableName;
+
+
