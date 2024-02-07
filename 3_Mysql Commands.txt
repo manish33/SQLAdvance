@@ -1,0 +1,8 @@
+1) Press Ctrl + L to clear the MySQL command line
+2) press Ctrl + c+ enter to go past the mistakes
+
+3) import sql file into mysql
+mysql> source /Users/m0s0qyz/Documents/SQL/w3schools.sql
+
+4) select db
+ USE `w3schools`;
